@@ -25,7 +25,7 @@ module.exports = {
       },
       {
         test: /\.m?js$/,
-        exclude: /(node_modules|bower_components)/,
+        exclude: /(node_modules)/,
         use: {
           loader: 'babel-loader',
           options: {
@@ -45,6 +45,6 @@ module.exports = {
   ],
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
-    port: 9000,
+    port: 8080,
   },
 };

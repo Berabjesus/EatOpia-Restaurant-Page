@@ -4,7 +4,9 @@
   "description": "\"\"\u001b[DRestaurant \"\u001b[Dapp made with javascript\"",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --progress -p",
+    "start": "webpack-dev-server --open",
+    "watch": "webpack --progress --watch --mode=production"
   },
   "author": "",
   "license": "ISC",
