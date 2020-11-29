@@ -12,8 +12,29 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
+        test: /\.scss$/,
+        enforce: 'pre',
+        use: [
+          {
+            loader: 'style-loader'
+          },
+          {
+            loader: 'css-loader'
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins: function () {
+                return [
+                  require('autoprefixer')
+                ];
+              }
+            }
+          },
+          {
+            loader: 'sass-loader'
+          }
+        ]
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
