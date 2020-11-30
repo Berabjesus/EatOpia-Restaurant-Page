@@ -9,14 +9,15 @@ const homePage = () => {
 const firstSection = (container) => {
   const BRAND_NAME = 'Eat Opia'
   const section = document.createElement('section')
-  section.classList.add('d-flex', 'flex-column', 'home_section-one','w-100', 'h-100vh', 'custom-border')
+  section.classList.add('d-flex', 'flex-column', 'home_section-one','w-100', 'h-100vh')
 
   const logoContainer = document.createElement('div')
-  logoContainer.classList.add('d-flex', 'flex-column','w-100','logo-container', 'logo-font')
-  let mainHeader = document.createElement('h1')
+  logoContainer.classList.add('d-flex', 'flex-column', 'align-self-start','logo-container', 'logo-font')
+  const mainHeader = document.createElement('h1')
   mainHeader.classList.add('logo')
   mainHeader.innerText = BRAND_NAME
-  let subHeader = document.createElement('h6')
+  const subHeader = document.createElement('h6')
+  subHeader.classList.add('text-center')
   subHeader.innerText = 'Test the local cuisine'
   logoContainer.appendChild(mainHeader)
   logoContainer.appendChild(subHeader)
@@ -30,7 +31,18 @@ const firstSection = (container) => {
   imageContainer.appendChild(image)
   
   section.appendChild(imageContainer)
+
+  const divider = setdivider('Best Restaurant In Town')
+  section.appendChild(divider)
+  
   container.appendChild(section)
+}
+
+const setdivider = (text) => {
+  let divider = document.createElement('h5')
+  divider.innerText = text
+  divider.classList.add('align-self-center','divider-line')
+  return divider
 }
 
 export default homePage;

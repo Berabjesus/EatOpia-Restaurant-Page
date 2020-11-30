@@ -1,13 +1,13 @@
 @import "~bootstrap/scss/bootstrap";
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet');
 
 /*
 *   CSS TABLE OF CONTENTS
 *  
 *   1. Variables
       1.1 Colors
-*   2. Defaults
+*   2. Globals
 *   3. Wrapper
 *   4. Navbar
 *   5. main
@@ -21,10 +21,14 @@ $mainBackgroundColor: #f8f8f8;
 
 /** 1.2 fonts **/
 $mainFont:  'Raleway', sans-serif;
-$logoFont: 'Comfortaa', sans-serif;
+$logoFont: 'Montserrat', sans-serif;
 
-/*** 2. Defaults ***/
-/*** 2.1 Defaults - fonts ***/
+/*** 2. Globals ***/
+/*** 2.1 Globals - fonts ***/
+* {
+  font-family: $mainFont;
+}
+
 .main-font {
   font-family: $mainFont;
   font-weight: 700;
@@ -34,7 +38,7 @@ $logoFont: 'Comfortaa', sans-serif;
   font-family: $logoFont;
 }
 
-/*** 2.2 Defaults - display ***/
+/*** 2.2 Globals - display ***/
 .fade {
   opacity: 0.3;
 }
@@ -43,9 +47,32 @@ $logoFont: 'Comfortaa', sans-serif;
   height: 100vh;
 }
 
-/*** 2.3 Defaults - border ***/
+/*** 2.3 Globals - border ***/
 .custom-border {
   border: 2px dashed red;
+}
+
+.divider-line {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.divider-line::before,
+.divider-line::after {
+  content: '';
+  align-self: center;
+  flex: 1 1 0;
+  width: 40%;
+  margin: 0 2rem;
+  // border-bottom: 2px solid black;
+  border: 2px solid; border-image: linear-gradient(90deg, rgba(60,74,83,.00) 40%, black)1; border-left:none; border-top:none; border-right:none;  
+}
+
+.divider-line::after {
+  border: 2px solid; border-image: linear-gradient(-90deg,  rgba(60,74,83,.00) 40%,black) 1; border-left:none; border-top:none; border-right:none;  
 }
 
 /*** 3. Wrapper ***/
@@ -63,14 +90,14 @@ $logoFont: 'Comfortaa', sans-serif;
 
 .nav-link {
   color: black;
-  font-size: 1.2rem;
+  font-size: 1rem;
+  font-weight: 800;
   transition: transform 0.2s linear;
 }
 
 .nav-link:hover,
 .nav-link:active {
   color: black;
-  border-bottom: 1px solid black;
   transform: scale(1.2);
 }
 
@@ -86,13 +113,13 @@ $logoFont: 'Comfortaa', sans-serif;
 }
 
 .logo {
-  font-weight: 700;
+  font-weight: 900;
   font-size: 3vw;
 }
 
 .main-image-container {
   position: relative;
-  height: 88%;
+  height: 87%;
   width: auto;
 }
 
@@ -109,5 +136,4 @@ $logoFont: 'Comfortaa', sans-serif;
 .main-image {
   width: 100%;
   height: 100%;
-  opacity: 0.9;
 }
