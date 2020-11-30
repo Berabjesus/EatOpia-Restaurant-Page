@@ -8,7 +8,7 @@ export const setImageProperties = (image, source, ...classes) => {
   }
 }
 
-export const renderOnScroll = (parentElement, childElement, referenceElement) => {
+export const renderOnScroll = (parentElement, childElement, referenceElement, ...addClass) => {
   let iswindowScrolled = false
   window.onscroll = () => {
     if (window.scrollY > (referenceElement.offsetTop / 2) && !iswindowScrolled){

@@ -41,16 +41,24 @@ const firstSection = (container) => {
 
 const secondSection = (container) => {
   const section = document.createElement('section')
-  section.classList.add('w-100','mt-5','pt-5', 'custom-border', 'section-two')
+  section.classList.add('w-100','mt-5', 'custom-border', 'section-two')
 
   const videoContainer = document.createElement('div')
-  videoContainer.classList.add('d-flex','video-container')
+  videoContainer.classList.add('d-flex','h-100','pr-3','video-container', 'fade_in')
   const video = document.createElement('iframe')
   video.classList.add('col-12','col-md-6','video')
-  video.setAttribute("src", 'https://www.youtube.com/embed/a0Z1vpJNrtE');
+  video.setAttribute("src", 'https://www.youtube.com/embed/a0Z1vpJNrtE?autoplay=0');
+  video.setAttribute("allowfullscreen", "allowfullscreen");
+  video.setAttribute("clipboard-write","clipboard-write")
   video.style.width = "640px";
-  video.style.height = "480px";
+  video.style.height = "100%";
+
+  const videoDescription = document.createElement('div')
+  videoDescription.classList.add('col-12','col-md-6')
+  videoDescription.innerText = '  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis a eos maxime nisi sapiente unde, amet libero neque assumenda reprehenderit necessitatibus! Debitis nulla similique voluptatem quo dignissimos culpa id dolorem maiores soluta ea enim, laudantium voluptatum odit recusandae iste rem.'
+
   videoContainer.appendChild(video)
+  videoContainer.appendChild(videoDescription)
 
   getFunction.renderOnScroll(section, videoContainer, document.getElementsByClassName('divider-line')[0])
 

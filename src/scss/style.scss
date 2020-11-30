@@ -52,8 +52,8 @@ $logoFont: 'Montserrat', sans-serif;
 }
 
 .fade_in {
-  -webkit-animation: fadein 1s 1;
-  animation: fadein 1s 1;
+  -webkit-animation: fadein 1.5s 1;
+  animation: fadein 1.5s 1;
 }
 
 /*** 2.3 Globals - border ***/
@@ -151,6 +151,14 @@ $logoFont: 'Montserrat', sans-serif;
 /*** 5.2 section two ***/
 .section-two {
   height: 70vh;
+}
+
+.video-container {
+  position: relative;
+}
+
+.video {
+  background-color: black;
 }
 
 /*** Animations ***/
