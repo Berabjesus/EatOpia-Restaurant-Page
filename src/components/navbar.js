@@ -27,7 +27,7 @@ const addPropertiesToElements = (...elements) => {
   const NAV_ITEMS = ['Home', 'Menu', 'My Plate', 'About']
   for (let i in elements) {
     elements[i] = document.createElement('a')
-    elements[i].classList.add('nav-link', 'mb-5','p-0', 'pb-1', 'w-auto','text-right','main-font')
+    elements[i].classList.add('nav-link', 'mb-5','p-0', 'pb-1', 'w-auto','text-left','main-font')
     elements[i].href = '#'
     elements[i].addEventListener("click", ()=>{setLinkToActive(elements[i])});
     elements[i].innerText = NAV_ITEMS[i]

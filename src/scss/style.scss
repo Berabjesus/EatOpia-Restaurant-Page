@@ -51,6 +51,11 @@ $logoFont: 'Montserrat', sans-serif;
   height: 50vh;
 }
 
+.fade_in {
+  -webkit-animation: fadein 1s 1;
+  animation: fadein 1s 1;
+}
+
 /*** 2.3 Globals - border ***/
 .custom-border {
   border: 2px dashed red;
@@ -112,12 +117,14 @@ $logoFont: 'Montserrat', sans-serif;
 }
 
 .logo-container {
+  position: relative;
+  z-index: 99;
   height: 12%;
 }
 
 .logo {
   font-weight: 900;
-  font-size: 3vw;
+  font-size: 50px;
 }
 
 .main-image-container {
@@ -143,5 +150,12 @@ $logoFont: 'Montserrat', sans-serif;
 
 /*** 5.2 section two ***/
 .section-two {
+  height: 70vh;
+}
 
+/*** Animations ***/
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }

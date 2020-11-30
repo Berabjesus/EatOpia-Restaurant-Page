@@ -9,7 +9,7 @@ const homePage = () => {
 const firstSection = (container) => {
   const BRAND_NAME = 'Eat Opia'
   const section = document.createElement('section')
-  section.classList.add('d-flex', 'flex-column', 'section-one','w-100', 'h-100vh')
+  section.classList.add('d-flex', 'flex-column', 'section-one','w-100', 'h-100vh', 'fade_in')
 
   const logoContainer = document.createElement('div')
   logoContainer.classList.add('d-flex', 'flex-column', 'align-self-start','logo-container', 'logo-font')
@@ -41,9 +41,26 @@ const firstSection = (container) => {
 
 const secondSection = (container) => {
   const section = document.createElement('section')
-  section.classList.add('w-100','mt-5','pt-5','h-50vh', 'custom-border', 'section-two')
+  section.classList.add('w-100','mt-5','pt-5', 'custom-border', 'section-two')
   const videoContainer = document.createElement('div')
   videoContainer.classList.add('video-container')
+  videoContainer.innerText = 'After scroll'
+
+  getFunction.renderOnScroll(section, videoContainer, document.getElementsByClassName('divider-line')[0])
+
+  // var position = document.getElementsByClassName('section-two')[0].scrollTop;
+  // setTimeout(() => {
+  // }, 100);
+  // console.log(document.getElementsByClassName('divider-line')[0].offsetTop);
+
+
+  // let iswindowScrolled = false
+  // window.onscroll = () => {
+  //   if (window.scrollY > window.innerHeight / 2 && !iswindowScrolled) {
+  //     section.append(videoContainer)
+  //     iswindowScrolled = true
+  //   }
+  // }
 
   container.appendChild(section)
 }
