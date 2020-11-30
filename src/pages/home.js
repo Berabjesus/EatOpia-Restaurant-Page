@@ -9,7 +9,7 @@ const homePage = () => {
 const firstSection = (container) => {
   const BRAND_NAME = 'Eat Opia'
   const section = document.createElement('section')
-  section.classList.add('d-flex', 'flex-column', 'home_section-one','w-100', 'h-100vh')
+  section.classList.add('d-flex', 'flex-column', 'section-one','w-100', 'h-100vh')
 
   const logoContainer = document.createElement('div')
   logoContainer.classList.add('d-flex', 'flex-column', 'align-self-start','logo-container', 'logo-font')
@@ -22,23 +22,33 @@ const firstSection = (container) => {
   logoContainer.appendChild(mainHeader)
   logoContainer.appendChild(subHeader)
 
-  section.appendChild(logoContainer)
 
   const imageContainer = document.createElement('div')
   imageContainer.classList.add('main-image-container', 'mx-auto')
   const image = document.createElement('img')
   getFunction.setImageProperties(image, mainImage, 'main-image')
   imageContainer.appendChild(image)
-  
-  section.appendChild(imageContainer)
 
-  const divider = setdivider('Best Restaurant In Town')
+  const divider = setPagedivider('Best Restaurant In Town')
+
+  section.appendChild(logoContainer)
+  section.appendChild(imageContainer)
   section.appendChild(divider)
-  
+  container.appendChild(section)
+
+  secondSection(container)
+}
+
+const secondSection = (container) => {
+  const section = document.createElement('section')
+  section.classList.add('w-100','mt-5','pt-5','h-50vh', 'custom-border', 'section-two')
+  const videoContainer = document.createElement('div')
+  videoContainer.classList.add('video-container')
+
   container.appendChild(section)
 }
 
-const setdivider = (text) => {
+const setPagedivider = (text) => {
   let divider = document.createElement('h5')
   divider.innerText = text
   divider.classList.add('align-self-center','divider-line')

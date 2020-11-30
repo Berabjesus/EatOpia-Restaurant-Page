@@ -47,6 +47,10 @@ $logoFont: 'Montserrat', sans-serif;
   height: 100vh;
 }
 
+.h-50vh {
+  height: 50vh;
+}
+
 /*** 2.3 Globals - border ***/
 .custom-border {
   border: 2px dashed red;
@@ -68,11 +72,11 @@ $logoFont: 'Montserrat', sans-serif;
   width: 40%;
   margin: 0 2rem;
   // border-bottom: 2px solid black;
-  border: 2px solid; border-image: linear-gradient(90deg, rgba(60,74,83,.00) 40%, black)1; border-left:none; border-top:none; border-right:none;  
+  border: 2px solid; border-image: linear-gradient(90deg, rgba(60,74,83,.00), black)1; border-left:none; border-top:none; border-right:none;  
 }
 
 .divider-line::after {
-  border: 2px solid; border-image: linear-gradient(-90deg,  rgba(60,74,83,.00) 40%,black) 1; border-left:none; border-top:none; border-right:none;  
+  border: 2px solid; border-image: linear-gradient(-90deg,  rgba(60,74,83,.00),black) 1; border-left:none; border-top:none; border-right:none;  
 }
 
 /*** 3. Wrapper ***/
@@ -103,8 +107,7 @@ $logoFont: 'Montserrat', sans-serif;
 
 /*** 5. Main ***/
 /*** 5.1 section one ***/
-/*** 5.1.1 section one -- Home***/
-.home_section-one {
+.section-one {
 
 }
 
@@ -136,4 +139,9 @@ $logoFont: 'Montserrat', sans-serif;
 .main-image {
   width: 100%;
   height: 100%;
+}
+
+/*** 5.2 section two ***/
+.section-two {
+
 }
