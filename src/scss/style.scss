@@ -1,1 +1,81 @@
 @import "~bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+
+/*
+*   CSS TABLE OF CONTENTS
+*  
+*   1. Variables
+      1.1 Colors
+*   2. Defaults
+*   3. Wrapper
+*   4. Navbar
+*   5. main
+*     5.1 section one
+*
+*/
+
+/*** 1. Variables ***/
+/*** 1.1 Colors ***/
+$mainBackgroundColor: #f8f8f8;
+
+/** 1.2 fonts **/
+$mainFont:  'Raleway', sans-serif;
+$logoFont: 'Comfortaa', sans-serif;
+/*** 2. Defaults ***/
+/*** 2.1 Defaults - fonts ***/
+.main-font {
+  font-family: $mainFont;
+  font-weight: 700;
+}
+
+.logo-font {
+  font-family: $logoFont;
+}
+
+/*** 2.1 Defaults - display ***/
+.fade {
+  opacity: 0.3;
+}
+
+.h-100vh {
+  height: 100vh;
+}
+
+/*** 3. Wrapper ***/
+.main {
+  background-color: $mainBackgroundColor;
+}
+
+/*** 4. Navbar ***/
+.navbar_container {
+  position: fixed;
+  right: 1%;
+  top: 30%;
+  width: auto;
+}
+
+.nav-link {
+  color: black;
+  font-size: 1.2rem;
+  transition: transform 0.2s linear;
+}
+
+.nav-link:hover,
+.nav-link:active {
+  color: black;
+  border-bottom: 1px solid black;
+  transform: scale(1.2);
+}
+
+/*** 5. Main ***/
+/*** 5.1 section one ***/
+/*** 5.1.1 section one -- Home***/
+.home_section-one {
+
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 4vw;
+}
