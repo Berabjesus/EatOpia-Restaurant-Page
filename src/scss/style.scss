@@ -22,6 +22,7 @@ $mainBackgroundColor: #f8f8f8;
 /** 1.2 fonts **/
 $mainFont:  'Raleway', sans-serif;
 $logoFont: 'Comfortaa', sans-serif;
+
 /*** 2. Defaults ***/
 /*** 2.1 Defaults - fonts ***/
 .main-font {
@@ -33,13 +34,18 @@ $logoFont: 'Comfortaa', sans-serif;
   font-family: $logoFont;
 }
 
-/*** 2.1 Defaults - display ***/
+/*** 2.2 Defaults - display ***/
 .fade {
   opacity: 0.3;
 }
 
 .h-100vh {
   height: 100vh;
+}
+
+/*** 2.3 Defaults - border ***/
+.custom-border {
+  border: 2px dashed red;
 }
 
 /*** 3. Wrapper ***/
@@ -75,7 +81,33 @@ $logoFont: 'Comfortaa', sans-serif;
 
 }
 
+.logo-container {
+  height: 12%;
+}
+
 .logo {
   font-weight: 700;
-  font-size: 4vw;
+  font-size: 3vw;
+}
+
+.main-image-container {
+  position: relative;
+  height: 88%;
+  width: auto;
+}
+
+.main-image-container::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #f8f8f8, rgba(255, 255, 255, 0) 10%), linear-gradient(to bottom, #f8f8f8, rgba(255, 255, 255, 0) 20%), linear-gradient(to left, #f8f8f8, rgba(255, 255, 255, 0) 20%),linear-gradient(to top, #f8f8f8, rgba(255, 255, 255, 0) 20%);
+}
+
+.main-image {
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
 }

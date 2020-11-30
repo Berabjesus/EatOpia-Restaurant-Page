@@ -1,4 +1,5 @@
-import setLinkToActive from '../functions/navitems'
+import setLinkToActive from '../functions/navitems';
+import * as getFunction from '../functions/elementProcessor';
 
 const createNavbar = () => {
   const navbarContainer = document.createElement('div')
@@ -26,7 +27,7 @@ const addPropertiesToElements = (...elements) => {
   const NAV_ITEMS = ['Home', 'Menu', 'My Plate', 'About']
   for (let i in elements) {
     elements[i] = document.createElement('a')
-    elements[i].classList.add('nav-link', 'mb-4','p-0', 'pb-1', 'w-auto', 'main-font')
+    elements[i].classList.add('nav-link', 'mb-4','p-0', 'pb-1', 'w-auto','main-font')
     elements[i].href = '#'
     elements[i].addEventListener("click", ()=>{setLinkToActive(elements[i])});
     elements[i].innerText = NAV_ITEMS[i]
