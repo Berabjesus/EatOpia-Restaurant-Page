@@ -54,8 +54,16 @@ const secondSection = (container) => {
   video.style.height = "100%";
 
   const videoDescription = document.createElement('div')
-  videoDescription.classList.add('col-12','col-md-6')
-  videoDescription.innerText = '  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis a eos maxime nisi sapiente unde, amet libero neque assumenda reprehenderit necessitatibus! Debitis nulla similique voluptatem quo dignissimos culpa id dolorem maiores soluta ea enim, laudantium voluptatum odit recusandae iste rem.'
+  videoDescription.classList.add('col-12','col-md-6','d-flex', 'flex-column')
+  const descriptionHeader = document.createElement('h2')
+  descriptionHeader.classList.add('main-font', 'text-center')
+  descriptionHeader.innerText = 'Ethiopian cuisine'
+  const descriptionContent = document.createElement('p')
+  descriptionContent.classList.add('h5')
+  descriptionContent.innerText = 'Ethiopian cuisine characteristically consists of vegetable and often very spicy meat dishes. This is usually in the form of wat, a thick stew, served atop injera, a large sourdough flatbread, which is about 50 centimeters (20 inches) in diameter and made out of fermented teff flour.Ethiopians eat most of the time with their right hands, using pieces of injera to pick up bites of entrées and side dishes.'
+
+  videoDescription.appendChild(descriptionHeader)
+  videoDescription.appendChild(descriptionContent)
 
   videoContainer.appendChild(video)
   videoContainer.appendChild(videoDescription)
