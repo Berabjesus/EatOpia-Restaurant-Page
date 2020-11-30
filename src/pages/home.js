@@ -42,25 +42,17 @@ const firstSection = (container) => {
 const secondSection = (container) => {
   const section = document.createElement('section')
   section.classList.add('w-100','mt-5','pt-5', 'custom-border', 'section-two')
+
   const videoContainer = document.createElement('div')
-  videoContainer.classList.add('video-container')
-  videoContainer.innerText = 'After scroll'
+  videoContainer.classList.add('d-flex','video-container')
+  const video = document.createElement('iframe')
+  video.classList.add('col-12','col-md-6','video')
+  video.setAttribute("src", 'https://www.youtube.com/embed/a0Z1vpJNrtE');
+  video.style.width = "640px";
+  video.style.height = "480px";
+  videoContainer.appendChild(video)
 
   getFunction.renderOnScroll(section, videoContainer, document.getElementsByClassName('divider-line')[0])
-
-  // var position = document.getElementsByClassName('section-two')[0].scrollTop;
-  // setTimeout(() => {
-  // }, 100);
-  // console.log(document.getElementsByClassName('divider-line')[0].offsetTop);
-
-
-  // let iswindowScrolled = false
-  // window.onscroll = () => {
-  //   if (window.scrollY > window.innerHeight / 2 && !iswindowScrolled) {
-  //     section.append(videoContainer)
-  //     iswindowScrolled = true
-  //   }
-  // }
 
   container.appendChild(section)
 }
