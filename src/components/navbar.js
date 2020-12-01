@@ -2,6 +2,7 @@ import setLinkToActive from '../functions/navitems';
 import * as getFunction from '../functions/elementProcessor';
 import homePage from '../pages/home';
 import menuPage from '../pages/menu';
+import platePage from '../pages/plate';
 
 const createNavbar = () => {
   const navbarContainer = document.createElement('div')
@@ -15,18 +16,17 @@ const createNavbar = () => {
 }
 
 const createNavElements = () => {
-  let [home, menu, custom_plate,about] = [,,,];
-  [home, menu, custom_plate,about] = renderLinks(home, menu, custom_plate,about);
+  let [home, menu, custom_plate] = [,,];
+  [home, menu, custom_plate] = renderLinks(home, menu, custom_plate);
   return {
     home: home,
     menu: menu,
     custom_plate: custom_plate,
-    about: about
   }
 }
 
 const renderLinks = (...elements) => {
-  const NAV_ITEMS = ['Home', 'Menu', 'My Plate', 'About']
+  const NAV_ITEMS = ['Home', 'Menu', 'My Plate']
   for (let i in elements) {
     elements[i] = document.createElement('a')
     elements[i].classList.add('nav-link', 'mb-5','p-0', 'pb-1', 'w-auto','text-left','main-font')
@@ -40,7 +40,7 @@ const renderLinks = (...elements) => {
 }
 
 const getPageFunction = (index) => {
-  const pageFunctions = [homePage, menuPage, homePage, homePage]
+  const pageFunctions = [homePage, menuPage, platePage]
   return pageFunctions[index]
 }
 
