@@ -26,7 +26,6 @@
 .menu-image-container {
   position: relative;
   width: 100%;
-  // border: 40px groove rgb(3, 1, 32);
 }
 
 .menu-text-container {
@@ -37,11 +36,12 @@
 }
 
 .menu-text-container * {
-  color: rgb(243, 230, 230);
+  color: rgb(247, 240, 240);
   font-family:'Eraser Regular';
 }
 
 .menu-text-container > h1 {
+  margin: 0 0 2rem 0;
   font-size: 100px;
 }
 

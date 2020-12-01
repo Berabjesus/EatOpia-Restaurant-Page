@@ -14,7 +14,7 @@ const drawBlackBoard = (container) => {
   section.classList.add('d-flex', 'flex-column','pr-4','menu-section-one','w-100', 'h-100vh', 'fade_in')
 
   const header = document.createElement('h1')
-  header.classList.add('font-weight-bolder', 'main-font', 'border-bottom', 'border-dark','text-center', 'pb-3')
+  header.classList.add('font-weight-bolder', 'main-font','text-center', 'pb-3')
   header.innerText = 'Daily Specials'
 
   const imageContainer = document.createElement('div')
@@ -26,7 +26,7 @@ const drawBlackBoard = (container) => {
   menuTextContainer.classList.add('menu-text-container', 'd-flex', 'flex-column')
   const menuHeader = document.createElement('h1')
   menuHeader.innerText = "Today's Specials"
-  const menuItems = ['Local Doro Wot', 'Local Key wot', 'Burger', 'Pizza']
+  const menuItems = ['Local Doro Wot', 'Local Key wot', 'Special Burger', 'Special Pizza']
   menuTextContainer.appendChild(menuHeader)
   for (const index in menuItems) {
     let newText = document.createElement('h4')
