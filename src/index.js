@@ -1,5 +1,6 @@
 import 'bootstrap';
-import './scss/style.scss';
+import './scss/home.scss';
+import './scss/menu.scss';
 import createNavbar from './components/navbar';
 import homePage from './pages/home'
 

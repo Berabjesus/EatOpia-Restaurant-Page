@@ -7,11 +7,19 @@
 *  
 *   1. Variables
       1.1 Colors
+      1.2 fonts
 *   2. Globals
-*   3. Wrapper
+      2.1 Globals - fonts
+      2.2 Globals - display
+      2.3 Globals - border
+*   3. main
 *   4. Navbar
-*   5. main
+*   5. Sections
 *     5.1 section one
+      5.2 section one
+      5.3 section one
+      5.4 section one
+*   6. Animations
 *
 */
 
@@ -88,7 +96,7 @@ $logoFont: 'Montserrat', sans-serif;
   border: 2px solid; border-image: linear-gradient(-90deg,  rgba(60,74,83,.00),black) 1; border-left:none; border-top:none; border-right:none;  
 }
 
-/*** 3. Wrapper ***/
+/*** 3. Main ***/
 .main {
   height: auto;
   background-color: $mainBackgroundColor;
@@ -115,11 +123,8 @@ $logoFont: 'Montserrat', sans-serif;
   transform: scale(1.2);
 }
 
-/*** 5. Main ***/
+/*** 5. Sections ***/
 /*** 5.1 section one ***/
-.section-one {
-}
-
 .logo-container {
   position: relative;
   z-index: 99;
@@ -221,7 +226,7 @@ $logoFont: 'Montserrat', sans-serif;
   background-color: inherit;
 }
 
-/*** Animations ***/
+/*** 6. Animations ***/
 
 @keyframes fadein {
   from { opacity: 0; }
