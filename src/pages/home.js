@@ -1,4 +1,7 @@
 import mainContainer from '../components/mainContainer';
+import header from '../components/header'
+import * as getFunction from '../functions/elementProcessor';
+
 import mainImage from '../assets/home.jpg';
 import food1 from '../assets/food1.jpg';
 import food2 from '../assets/food2.jpg';
@@ -6,29 +9,16 @@ import food3 from '../assets/food3.jpg';
 import food4 from '../assets/food4.jpg';
 import food5 from '../assets/food5.jpg';
 import food6 from '../assets/food6.jpg';
-import * as getFunction from '../functions/elementProcessor';
 
 const homePage = () => {
   firstSection(mainContainer())
 }
 
 const firstSection = (container) => {
-  const BRAND_NAME = 'Eat Opia'
   const section = document.createElement('section')
   section.classList.add('d-flex', 'flex-column','p-left-main', 'section-one','w-100', 'h-100vh', 'fade_in')
 
-  const logoContainer = document.createElement('div')
-  logoContainer.classList.add('d-flex', 'flex-column', 'align-self-start','logo-container', 'logo-font')
-  const mainHeader = document.createElement('h1')
-  mainHeader.classList.add('logo')
-  mainHeader.innerText = BRAND_NAME
-  const subHeader = document.createElement('h6')
-  subHeader.classList.add('text-center')
-  subHeader.innerText = 'Test the local cuisine'
-  logoContainer.appendChild(mainHeader)
-  logoContainer.appendChild(subHeader)
-
-
+  const logoContainer = header()
   const imageContainer = document.createElement('div')
   imageContainer.classList.add('main-image-container', 'mx-auto')
   const image = document.createElement('img')
