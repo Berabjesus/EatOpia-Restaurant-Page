@@ -25,9 +25,9 @@ export const addClassOnScroll = (element, referenceElementClass, ...classesToAdd
   const referenceElement = document.getElementsByClassName(referenceElementClass)
   
   window.addEventListener("scroll", function() {
-    console.log(window.scrollY);
-    console.log(referenceElement[0].offsetTop);
-    console.log(referenceElement[0].offsetHeight);
+    // console.log(window.scrollY);
+    // console.log(referenceElement[0].offsetTop);
+    // console.log(referenceElement[0].offsetHeight);
      if (window.scrollY > (referenceElement) && !iswindowScrolled){
       for (const newClass of classesToAdd) {
         element.classList.add(newClass)        

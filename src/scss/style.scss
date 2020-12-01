@@ -80,7 +80,6 @@ $logoFont: 'Montserrat', sans-serif;
   flex: 1 1 0;
   width: 40%;
   margin: 0 2rem;
-  // border-bottom: 2px solid black;
   border: 2px solid; border-image: linear-gradient(90deg, rgba(60,74,83,.00), black)1; border-left:none; border-top:none; border-right:none;  
 }
 
@@ -174,7 +173,43 @@ $logoFont: 'Montserrat', sans-serif;
 
 /*** 5.2 section three ***/
 .section-three {
-  min-height: 70vh;
+  height: 70vh;
+}
+
+.s3-image-container {
+  position: relative;
+}
+
+.s3-image-container::after {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #f8f8f8, rgba(255, 255, 255, 0) 30%), linear-gradient(to bottom, #f8f8f8, rgba(255, 255, 255, 0) 30%), linear-gradient(to left, #f8f8f8, rgba(255, 255, 255, 0) 30%),linear-gradient(to top, #f8f8f8, rgba(255, 255, 255, 0) 30%);
+}
+.s3-image-container:hover::after {
+  z-index: -1;
+}
+
+.s3-images {
+  position: relative;
+  height: 50%;
+  width: 33%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.2s linear;
+}
+
+.s3-images:hover{
+  z-index: 10;
+  box-shadow: 1px 2px 30px rgb(136, 127, 127);
+  background-color: rgba(0, 0, 0, 0.342);
+  object-fit: contain;
+  object-position: center;
+  transform: scale(1.3);
 }
 
 /*** Animations ***/
