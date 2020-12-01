@@ -8,10 +8,14 @@ export const setImageProperties = (image, source, ...classes) => {
   }
 }
 
-export const appendOnScroll = (parentElement, referenceElement, ...childElements) => {
+export const appendOnScroll = (parentElement, referenceElementClass,index,bool, ...childElements) => {
   let iswindowScrolled = false
+  let referenceElement = document.getElementsByClassName(referenceElementClass)[index]
   window.addEventListener("scroll", function() {
-    if (window.scrollY > (referenceElement.offsetTop / 2) && !iswindowScrolled){
+    if (referenceElement === undefined) {
+      referenceElement = document.getElementsByClassName(referenceElementClass)[index]
+    }
+    if ( referenceElement !== undefined && window.scrollY > (referenceElement.offsetTop/2) && !iswindowScrolled){
       for (const child of childElements) {
         parentElement.append(child)
       }
@@ -20,20 +24,9 @@ export const appendOnScroll = (parentElement, referenceElement, ...childElements
   })
 }
 
-export const addClassOnScroll = (element, referenceElementClass, ...classesToAdd) => {
-  let iswindowScrolled = false
-  const referenceElement = document.getElementsByClassName(referenceElementClass)
-  
-  window.addEventListener("scroll", function() {
-    // console.log(window.scrollY);
-    // console.log(referenceElement[0].offsetTop);
-    // console.log(referenceElement[0].offsetHeight);
-     if (window.scrollY > (referenceElement) && !iswindowScrolled){
-      for (const newClass of classesToAdd) {
-        element.classList.add(newClass)        
-      }  
-      iswindowScrolled = true
-    }
-  })
+export const setPagedivider = (text) => {
+  let divider = document.createElement('h5')
+  divider.innerText = text
+  divider.classList.add('align-self-center','divider-line')
+  return divider
 }
-

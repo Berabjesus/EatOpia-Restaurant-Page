@@ -35,7 +35,7 @@ const firstSection = (container) => {
   getFunction.setImageProperties(image, mainImage, 'w-100', 'h-100')
   imageContainer.appendChild(image)
 
-  const divider = setPagedivider('Our Chefs')
+  const divider = getFunction.setPagedivider('Our Chefs')
 
   section.appendChild(logoContainer)
   section.appendChild(imageContainer)
@@ -67,15 +67,12 @@ const secondSection = (container) => {
 
   videoDescription.appendChild(descriptionHeader)
   videoDescription.appendChild(descriptionContent)
-
   videoContainer.appendChild(video)
   videoContainer.appendChild(videoDescription)
 
-  const divider = setPagedivider('Always at your service')
+  const divider = getFunction.setPagedivider('Always at your service')
 
-  getFunction.appendOnScroll(section, document.getElementsByClassName('divider-line')[0],videoContainer, divider)
-
-  getFunction.addClassOnScroll(video,'section-two','mini-player')  
+  getFunction.appendOnScroll(section,'divider-line',0,false,videoContainer, divider)
 
   container.appendChild(section)
   thirdSection(container)
@@ -86,7 +83,7 @@ const thirdSection = (container) => {
   section.classList.add('row','w-100','mt-5','pt-4','p-left-main','pr-5','section-three')
 
   const imageContainer = document.createElement('div')
-  imageContainer.classList.add('d-flex','flex-wrap','col-12', 'col-md-6', 'h-100', 'px-0', 'pr-2','s3-image-container')
+  imageContainer.classList.add('d-flex','flex-wrap','col-12', 'col-md-6', 'h-100', 'px-0', 'pr-2','s3-image-container', 'fade_in')
   const foodImages = [food1, food2, food3,food4,food5,food6]
   for (const fileSource of foodImages) {
     let newImage = document.createElement('img')
@@ -95,25 +92,24 @@ const thirdSection = (container) => {
   }
 
   const mapContianer = document.createElement('div')
-  mapContianer.classList.add('col-12', 'col-md-6', 'shadow-lg', 'px-3')
+  mapContianer.classList.add('col-12', 'col-md-6', 'shadow-lg', 'px-3', 'fade_in')
   mapContianer.id = 'locationMap';
   let mapTag = document.createElement('script');
   mapTag.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyD6vfV2Sv3RnCU0hlBNQeAdrGX65yKXOuw&callback=initMap";
   mapTag.defer = true;
   mapContianer.appendChild(mapTag)
 
-  section.appendChild(imageContainer)
-  section.appendChild(mapContianer)
+  const divider = getFunction.setPagedivider('Contact Us')
+
+  getFunction.appendOnScroll(section, 'divider-line',1,true,imageContainer, mapContianer, divider)
+
+  // section.appendChild(imageContainer)
+  // section.appendChild(mapContianer)
   
   container.appendChild(section)
 }
 
-const setPagedivider = (text) => {
-  let divider = document.createElement('h5')
-  divider.innerText = text
-  divider.classList.add('align-self-center','divider-line')
-  return divider
-}
+
 
  window.initMap = () => {
   var restaurantCoordinates = {lat:  9.016226979125845, lng:38.742519222017364};
