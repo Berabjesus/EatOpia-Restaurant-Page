@@ -8,10 +8,20 @@ body.appendChild(createNavbar())
 
 homePage()
 
-// let bool = false
+// let b = document.getElementById('content')
+
+// // b.addEventListener('scroll', function(e) {
+// //   // last_known_scroll_position = window.scrollY;
+// //   console.log('hellloooo');
+// // });
+
+// b.onscroll = () => {
+// }
+
+// function btnScroll(pos) {
+//   console.log('adasdfsd');
+// }
+
 // window.onscroll = () => {
-//   // if (window.scrollY > window.innerHeight / 2 && !bool) {
-//     console.log('here' + window.scrollY);
-//     // bool = true
-//   // }
+//   btnScroll(window.scrollY)
 // }
