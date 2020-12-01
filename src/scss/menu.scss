@@ -1,20 +1,50 @@
 /*
 *   CSS TABLE OF CONTENTS
 *  
-*   1. Variables
-      1.1 Colors
-      1.2 fonts
-*   2. Globals
-      2.1 Globals - fonts
-      2.2 Globals - display
-      2.3 Globals - border
-*   3. Wrapper
-*   4. Navbar
-*   5. main
-*     5.1 section one
-      5.2 section one
-      5.3 section one
-      5.4 section one
-*   6. Animations
+*   1. Sections
+*     1.1 section one
+      1.1 section one
+      1.3 section one
+      1.4 section one
+*  
 *
 */
+
+/*** 1. sections ***/
+/*** 1.1 sections ***/
+@font-face {
+  font-family: 'Eraser Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Eraser Regular'), url('../assets/EraserRegular.woff') format('woff');
+  }
+
+.menu-section-one {
+  height: 90vh;
+}
+
+.menu-image-container {
+  position: relative;
+  width: 100%;
+  // border: 40px groove rgb(3, 1, 32);
+}
+
+.menu-text-container {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 0 0 0 5rem;
+}
+
+.menu-text-container * {
+  color: rgb(243, 230, 230);
+  font-family:'Eraser Regular';
+}
+
+.menu-text-container > h1 {
+  font-size: 100px;
+}
+
+.menu-text-container > h4 {
+  font-size: 80px;
+}
