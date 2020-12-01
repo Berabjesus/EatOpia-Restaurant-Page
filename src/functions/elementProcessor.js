@@ -8,7 +8,7 @@ export const setImageProperties = (image, source, ...classes) => {
   }
 }
 
-export const appendOnScroll = (parentElement, referenceElementClass,index,bool, ...childElements) => {
+export const appendOnScroll = (parentElement, referenceElementClass,index, ...childElements) => {
   let iswindowScrolled = false
   let referenceElement = document.getElementsByClassName(referenceElementClass)[index]
   window.addEventListener("scroll", function() {

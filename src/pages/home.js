@@ -72,7 +72,7 @@ const secondSection = (container) => {
 
   const divider = getFunction.setPagedivider('Always at your service')
 
-  getFunction.appendOnScroll(section,'divider-line',0,false,videoContainer, divider)
+  getFunction.appendOnScroll(section,'divider-line',0,videoContainer, divider)
 
   container.appendChild(section)
   thirdSection(container)
@@ -100,16 +100,51 @@ const thirdSection = (container) => {
   mapContianer.appendChild(mapTag)
 
   const divider = getFunction.setPagedivider('Contact Us')
-
-  getFunction.appendOnScroll(section, 'divider-line',1,true,imageContainer, mapContianer, divider)
-
-  // section.appendChild(imageContainer)
-  // section.appendChild(mapContianer)
+  divider.classList.add('mt-5')
+  getFunction.appendOnScroll(section, 'divider-line',1,imageContainer, mapContianer, divider)
   
   container.appendChild(section)
+  fourthSection(container)
 }
 
+const fourthSection = (container) => {
+  const section = document.createElement('section')
+  section.classList.add('row','d-flex','justify-content-around','w-100','p-left-main','pr-5','section-four')
+  const footerSection = [
+    {
+      title: "Contact Us",
+      items: ['FaceBook', 'Twitter', 'YouTube', 'Instagram']
+    },
+    {
+      title: "Services",
+      items: ['Delivery', 'Order', 'Weeding', 'Birthdays']
+    },
+    {
+      title: "Other",
+      items: ['FAQ', 'Employees', 'Clients', 'Blog']
+    }
+  ];
 
+  for (const div of footerSection) {
+    let itemContainer = document.createElement('div')
+    itemContainer.classList.add('d-flex','flex-column', 'col-6','col-md-3')
+    let header = document.createElement('h2')
+    header.innerText = div.title
+    header.classList.add('border-bottom','border-dark','mr-auto','pb-3')
+    itemContainer.appendChild(header)
+    for (const item of div.items) {
+      let text = item
+      item = document.createElement('a')
+      item.innerText = text
+      item.href = '#'
+      item.classList.add('footer-item','mt-3', 'main-font')
+      itemContainer.appendChild(item)
+    }
+    section.appendChild(itemContainer)
+  }
+
+  container.appendChild(section)
+}
 
  window.initMap = () => {
   var restaurantCoordinates = {lat:  9.016226979125845, lng:38.742519222017364};
