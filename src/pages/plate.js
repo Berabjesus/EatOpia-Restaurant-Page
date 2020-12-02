@@ -25,12 +25,12 @@ const buildBoard = (container) => {
   sectionHeader.classList.add('text-center')
 
   const itemsContainer = document.createElement('div')
-  itemsContainer.classList.add('plate-items-container','col-2','d-flex','flex-column','h-100' )
+  itemsContainer.classList.add('plate-items-container','col-2','d-flex','flex-column','h-100', 'shadow-lg' )
   const foods = getFoods();
   let index = 0
   for (const food of foods) {
     let imgDiv = document.createElement('div')
-    imgDiv.classList.add('drag-box','droppable')
+    imgDiv.classList.add('drag-box','droppable', 'mb-1')
     let foodImage = document.createElement('img')
     getFunction.setImageProperties(foodImage, food.picture, 'h-100', 'w-100','dragbox-images')
     foodImage.id = 'draggable-'+index
