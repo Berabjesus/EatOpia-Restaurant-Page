@@ -28,10 +28,13 @@
 }
 
 .drag-box {
-  border: 3px dashed black;
-  cursor: grab;
   min-height: 150px;
+  max-height: 150px;
   width: auto;
+  border: 1px dashed rgb(102, 100, 100);
+  box-shadow: 5px 0px 20px rgb(172, 170, 170);
+  cursor: grab;
+
 }
 
 .dragbox-images {
@@ -39,11 +42,19 @@
 }
 
 .drop-box {
-  border: 3px dashed black;
+  border: 1px dashed rgb(30, 78, 56);
+  border-radius: 50%;
   height: 33.3%;
   width: 33.3%;
 }
 
 .over {
-  border: 1px dashed rgb(168, 154, 154);
+  border: 2px dashed rgb(83, 78, 78);
+  background-color: rgba(224, 215, 200, 0.418);
+}
+
+.price-box {
+  border: 3px dashed black;
+  height: 100px;
+  width: 100%;
 }

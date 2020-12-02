@@ -30,3 +30,4 @@ export const setPagedivider = (text) => {
   divider.classList.add('align-self-center','divider-line')
   return divider
 }
+

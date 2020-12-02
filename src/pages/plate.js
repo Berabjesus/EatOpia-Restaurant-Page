@@ -26,18 +26,19 @@ const buildBoard = (container) => {
 
   const itemsContainer = document.createElement('div')
   itemsContainer.classList.add('plate-items-container','col-2','d-flex','flex-column','h-100' )
-  const foods = [food1,food2,food3,food4,food5,food6,food7,food8,food9];
+  const foods = getFoods();
   let index = 0
   for (const food of foods) {
-    index += 1
     let imgDiv = document.createElement('div')
     imgDiv.classList.add('drag-box','droppable')
     let foodImage = document.createElement('img')
-    getFunction.setImageProperties(foodImage, food, 'h-100', 'w-100','dragbox-images')
+    getFunction.setImageProperties(foodImage, food.picture, 'h-100', 'w-100','dragbox-images')
     foodImage.id = 'draggable-'+index
+    foodImage.setAttribute('data-price', food.price)
+    foodImage.draggable = true
     imgDiv.appendChild(foodImage)
-    imgDiv.draggable = true
     itemsContainer.appendChild(imgDiv)
+    index += 1
   }
 
   const plateContainer = document.createElement('div')
@@ -50,7 +51,11 @@ const buildBoard = (container) => {
   }
 
   const priceContainer = document.createElement('div')
-  priceContainer.classList.add('col-1')
+  priceContainer.classList.add('col-1','d-flex','align-items-center', 'px-0','price-container')
+  const priceBox = document.createElement('div')
+  priceBox.classList.add('price-box', 'd-flex', 'flex-column', 'text-center', 'h4')
+  priceBox.innerText = 'Total Price'
+  priceContainer.appendChild(priceBox)
 
   section.appendChild(sectionHeader)
   section.appendChild(itemsContainer)
@@ -68,7 +73,6 @@ const addDragAndDrop = () => {
       e.preventDefault()
     });
     box.addEventListener('dragstart', dragStart)
-    box.addEventListener('dragend', dragEnd)  
     box.addEventListener('drop', dragDrop)  
   }
   const dropBox = document.querySelectorAll('.droppable')
@@ -80,11 +84,7 @@ const addDragAndDrop = () => {
   }
   
   function dragStart(e) {
-    e.dataTransfer.setData("text", e.target.id);
-  }
-  
-  function dragEnd() {
-    this.classList.remove('hold')
+    e.dataTransfer.setData("foodItem", e.target.id);
   }
 
   function dragOver(e) {
@@ -98,9 +98,37 @@ const addDragAndDrop = () => {
 
   function dragDrop(e) {
     this.classList.remove('over')
-    e.target.appendChild(document.getElementById(e.dataTransfer.getData("text")))
+    const data = e.dataTransfer.getData("foodItem")
+    e.target.appendChild(document.getElementById(data))
+    calculatePrice()
+  }
+}
+
+const getFoods = () => {
+  let foods = [food1,food2,food3,food4,food5,food6,food7,food8,food9];
+  const price = [20, 25, 15, 17, 50, 55, 30, 45, 50]
+  for (const index in foods) {
+    foods[index] = setFoodObject(foods[index], price[index])
   }
 
+  return foods;
+}
+
+const setFoodObject = (foodPicture, price) => {
+  let newFoodObject = {
+    picture: foodPicture,
+    price: price
+  }
+  return newFoodObject
+}
+
+const calculatePrice = () => {
+  let boxesInPlate = document.getElementsByClassName('drop-box')
+  for (const box of boxesInPlate) {
+    if (box.children[0] !== undefined) {
+      console.log(box.children[0].getAttribute('data-price'))
+    }
+  }
 }
 
 export default platePage;
