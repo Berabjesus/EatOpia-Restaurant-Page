@@ -51,10 +51,15 @@ const buildBoard = (container) => {
   }
 
   const priceContainer = document.createElement('div')
-  priceContainer.classList.add('col-1','d-flex','align-items-center', 'px-0','price-container')
+  priceContainer.classList.add('col-1','d-flex','align-items-start', 'px-0','price-container')
   const priceBox = document.createElement('div')
   priceBox.classList.add('price-box', 'd-flex', 'flex-column', 'text-center', 'h4')
   priceBox.innerText = 'Total Price'
+  let price = document.createElement('h1')
+  price.innerText = 0
+  price.classList.add('total-price')
+  priceBox.appendChild(price)
+
   priceContainer.appendChild(priceBox)
 
   section.appendChild(sectionHeader)
@@ -100,7 +105,7 @@ const addDragAndDrop = () => {
     this.classList.remove('over')
     const data = e.dataTransfer.getData("foodItem")
     e.target.appendChild(document.getElementById(data))
-    calculatePrice()
+    calculatePrice(e.target, data)
   }
 }
 
@@ -122,13 +127,23 @@ const setFoodObject = (foodPicture, price) => {
   return newFoodObject
 }
 
-const calculatePrice = () => {
+const calculatePrice = (element, id) => {
+  console.log(element);
+  
   let boxesInPlate = document.getElementsByClassName('drop-box')
-  for (const box of boxesInPlate) {
-    if (box.children[0] !== undefined) {
-      console.log(box.children[0].getAttribute('data-price'))
+  const price = document.querySelector('.total-price')
+  var sum = 0
+  if (element.classList.contains('drop-box')) {
+    for (const box of boxesInPlate) {
+      if (box.children[0] !== undefined) {
+        sum = parseInt(price.innerText) + parseInt(box.children[0].getAttribute('data-price'))
+      }
     }
+    price.innerText = sum
+  } else {
+    sum =  parseInt(price.innerText) - parseInt(document.getElementById(id).getAttribute('data-price'))
   }
+  price.innerText = sum
 }
 
 export default platePage;
