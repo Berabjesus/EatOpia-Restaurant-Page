@@ -9,17 +9,40 @@
 /*** 1. section one ***/
 
 .plate-section-one {
-  height: 90vh;
+  border-top: 3px solid black;
+  min-height: 90vh;
+  height: 120vh;
+}
+
+.plate-items-container {
+  overflow-y: auto;
 }
 
 .plate-container {
+  height: 100%;
   padding:5rem 10rem 5rem 10rem;
   background: url('../assets/plate/plate.png') no-repeat;
   background-position: center;
-  background-size: 80%;
+  background-size: 90%;
 }
 
-.food-box {
+.drag-box {
+  border: 3px dashed black;
+  cursor: grab;
+  min-height: 150px;
+  width: auto;
+}
+
+.dragbox-images {
+  object-fit: contain;
+}
+
+.drop-box {
+  border: 3px dashed black;
   height: 33.3%;
   width: 33.3%;
+}
+
+.over {
+  border: 1px dashed rgb(168, 154, 154);
 }

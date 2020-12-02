@@ -69,6 +69,23 @@ $logoFont: 'Montserrat', sans-serif;
   animation: fadein 2s 1;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+
 /*** 2.3 Globals - border ***/
 .custom-border {
   border: 2px dashed red;
@@ -232,3 +249,4 @@ $logoFont: 'Montserrat', sans-serif;
   from { opacity: 0; }
   to   { opacity: 1; }
 }
+
