@@ -22,7 +22,7 @@ const buildBoard = (container) => {
   const FOODS_ON_PLATE = 9
   for (let i = 0; i < FOODS_ON_PLATE; i++) {
     let div = document.createElement('div')
-    div.classList.add('food-box', 'custom-border')
+    div.classList.add('food-box','mb-4', 'custom-border')
     plateContainer.appendChild(div)
   }
 

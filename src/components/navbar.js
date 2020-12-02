@@ -6,7 +6,7 @@ import platePage from '../pages/plate';
 
 const createNavbar = () => {
   const navbarContainer = document.createElement('div')
-  navbarContainer.classList.add('navbar_container', 'border-left','border-dark', 'pl-3')
+  navbarContainer.classList.add('navbar_container', 'pl-3')
   const links = createNavElements()
   for (let i in links) {
     navbarContainer.appendChild(links[i])
