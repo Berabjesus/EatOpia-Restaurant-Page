@@ -17,5 +17,5 @@ const body = document.getElementsByTagName('body')[0]
 body.appendChild(createNavbar())
 
 // menuPage()
-// platePage()
-homePage()
+platePage()
+// homePage()
