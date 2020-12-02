@@ -15,12 +15,21 @@ const buildBoard = (container) => {
   itemsContainer.classList.add('col-2','d-flex','flex-colum','h-100' ,'custom-border')
 
   const plateContainer = document.createElement('div')
-  plateContainer.classList.add('col-10', 'p-2', 'd-flex', 'flex-wrap','custom-border')
-  const NUMBER_OF_ITEMS_ON_PLATE = 6
+  plateContainer.classList.add('plate-container','col-9', 'd-flex', 'flex-wrap','custom-border')
+  const priceContainer = document.createElement('div')
+  priceContainer.classList.add('col-1', 'custom-border')
+
+  const FOODS_ON_PLATE = 9
+  for (let i = 0; i < FOODS_ON_PLATE; i++) {
+    let div = document.createElement('div')
+    div.classList.add('food-box', 'custom-border')
+    plateContainer.appendChild(div)
+  }
 
 
   section.appendChild(itemsContainer)
   section.appendChild(plateContainer)
+  section.appendChild(priceContainer)
   container.appendChild(section)
 }
 
