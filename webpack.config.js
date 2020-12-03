@@ -16,25 +16,28 @@ module.exports = {
         enforce: 'pre',
         use: [
           {
-            loader: 'style-loader'
+            loader: 'style-loader',
           },
           {
-            loader: 'css-loader'
+            loader: 'css-loader',
           },
           {
             loader: 'postcss-loader',
             options: {
-              plugins: function () {
+              plugins() {
                 return [
-                  require('autoprefixer')
+
+                  /* eslint-disable global-require */
+                  require('autoprefixer'),
+                /* eslint-enable global-require */
                 ];
-              }
-            }
+              },
+            },
           },
           {
-            loader: 'sass-loader'
-          }
-        ]
+            loader: 'sass-loader',
+          },
+        ],
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
