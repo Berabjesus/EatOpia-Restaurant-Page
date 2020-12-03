@@ -34,11 +34,13 @@
 ## Getting Started
 - Clone this repo on your local machine
 - Go to the cloned folder
-- Run `npm install` on the terminal to install dependancies
-- Run `npm run build` to pack the files in the src folder
-- Go to the dist folder and open index.html or
-- Run `npm run start` to open it on a live server
-
+- If you want to repack the file
+  - Run `npm install` on the terminal to install dependancies
+  - Run `npm run build` to pack the files in the src folder
+  - Go to the dist folder and open index.html
+  - Run `npm run start` to open it on a live server
+- Else
+  - Just Go to the dist folder and open index.html
 
 ## Author
 
