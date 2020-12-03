@@ -1,11 +1,12 @@
 /*
 *   CSS TABLE OF CONTENTS
-*  
+*
 *   1. Sections
 *     1.1 section one
-*  
+*
 *
 */
+
 /*** 1. section one ***/
 
 .plate-section-one {
@@ -21,7 +22,7 @@
 
 .plate-container {
   height: 100%;
-  padding:5rem 10rem 5rem 10rem;
+  padding: 5rem 10rem 5rem 10rem;
   background: url('../assets/plate/plate.png') no-repeat;
   background-position: center;
   background-size: 90%;
@@ -32,9 +33,8 @@
   max-height: 150px;
   width: auto;
   border: 1px dashed rgb(102, 100, 100);
-  box-shadow: 5px 0px 20px rgb(172, 170, 170);
+  box-shadow: 5px 0 20px rgb(172, 170, 170);
   cursor: grab;
-
 }
 
 .dragbox-images {

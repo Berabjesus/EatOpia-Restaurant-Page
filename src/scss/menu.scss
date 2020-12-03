@@ -1,20 +1,21 @@
 /*
 *   CSS TABLE OF CONTENTS
-*  
+*
 *   1. Sections
 *     1.1 section one
-*  
+*
 *
 */
 
 /*** 1. sections ***/
+
 /*** 1.1 section -one ***/
 @font-face {
-  font-family: 'Eraser Regular';
+  font-family: 'Eraser-Regular';
   font-style: normal;
   font-weight: normal;
-  src: local('Eraser Regular'), url('../assets/EraserRegular.woff') format('woff');
-  }
+  src: local('Eraser-Regular'), url('../assets/EraserRegular.woff') format('woff');
+}
 
 .menu-section-one {
   height: 90vh;
@@ -23,7 +24,7 @@
 .menu-image-container {
   position: relative;
   width: 100%;
-  box-shadow: 3px 0px 50px rgba(0, 0, 0, 0.842);
+  box-shadow: 3px 0 50px rgba(0, 0, 0, 0.842);
 }
 
 .menu-text-container {
@@ -35,7 +36,7 @@
 
 .menu-text-container * {
   color: rgb(247, 240, 240);
-  font-family:'Eraser Regular';
+  font-family: 'Eraser-Regular';
 }
 
 .menu-text-container > h1 {
