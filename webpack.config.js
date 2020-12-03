@@ -26,7 +26,10 @@ module.exports = {
             options: {
               plugins() {
                 return [
+
+                  /* eslint-disable global-require */
                   require('autoprefixer'),
+                /* eslint-enable global-require */
                 ];
               },
             },

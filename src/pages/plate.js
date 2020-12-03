@@ -1,3 +1,6 @@
+/* eslint-disable no-restricted-syntax */
+/* eslint-disable no-use-before-define */
+
 import mainContainer from '../components/mainContainer';
 import header from '../components/header';
 import food1 from '../assets/plate/p1.png';
@@ -44,7 +47,7 @@ const buildBoard = (container) => {
   const plateContainer = document.createElement('div');
   plateContainer.classList.add('plate-container', 'col-9', 'd-flex', 'flex-wrap');
   const FOODS_ON_PLATE = 9;
-  for (let i = 0; i < FOODS_ON_PLATE; i++) {
+  for (let i = 0; i < FOODS_ON_PLATE; i += 1) {
     const div = document.createElement('div');
     div.classList.add('droppable', 'drop-box', 'mb-2');
     plateContainer.appendChild(div);
@@ -97,7 +100,7 @@ const addDragAndDrop = () => {
     this.classList.add('over');
   }
 
-  function dragLeave(e) {
+  function dragLeave() {
     this.classList.remove('over');
   }
 
@@ -113,7 +116,9 @@ const getFoods = () => {
   const foods = [food1, food2, food3, food4, food5, food6, food7, food8, food9];
   const price = [20, 25, 15, 17, 50, 55, 30, 45, 50];
   for (const index in foods) {
-    foods[index] = setFoodObject(foods[index], price[index]);
+    if (foods[index] !== undefined) {
+      foods[index] = setFoodObject(foods[index], price[index]);
+    }
   }
 
   return foods;
@@ -128,20 +133,18 @@ const setFoodObject = (foodPicture, price) => {
 };
 
 const calculatePrice = (element, id) => {
-  console.log(element);
-
   const boxesInPlate = document.getElementsByClassName('drop-box');
   const price = document.querySelector('.total-price');
   let sum = 0;
   if (element.classList.contains('drop-box')) {
     for (const box of boxesInPlate) {
       if (box.children[0] !== undefined) {
-        sum = parseInt(price.innerText) + parseInt(box.children[0].getAttribute('data-price'));
+        sum = parseInt(price.innerText, 10) + parseInt(box.children[0].getAttribute('data-price'), 10);
       }
     }
     price.innerText = sum;
   } else {
-    sum = parseInt(price.innerText) - parseInt(document.getElementById(id).getAttribute('data-price'));
+    sum = parseInt(price.innerText, 10) - parseInt(document.getElementById(id).getAttribute('data-price'), 10);
   }
   price.innerText = sum;
 };

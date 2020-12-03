@@ -1,3 +1,6 @@
+/* eslint-disable no-restricted-syntax */
+/* eslint-disable no-use-before-define */
+
 import mainContainer from '../components/mainContainer';
 import header from '../components/header';
 import * as getFunction from '../functions/elementProcessor';
@@ -122,7 +125,7 @@ const fourthSection = (container) => {
     header.innerText = div.title;
     header.classList.add('border-bottom', 'border-dark', 'mr-auto', 'pb-3');
     itemContainer.appendChild(header);
-    for (const item of div.items) {
+    for (let item of div.items) {
       const text = item;
       item = document.createElement('a');
       item.innerText = text;
@@ -143,7 +146,11 @@ window.initMap = () => {
     zoom: 16,
   };
   setTimeout(() => {
+    /* eslint-disable no-undef */
+
     const googlemap = new google.maps.Map(document.getElementById('locationMap'), mapOptions);
+    /* eslint-enable no-undef */
+    return googlemap;
   }, 100);
 };
 

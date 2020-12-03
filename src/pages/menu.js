@@ -34,7 +34,7 @@ const drawBlackBoard = (container) => {
   menuTextContainer.appendChild(menuHeader);
   for (const index in menuItems) {
     const newText = document.createElement('h4');
-    newText.innerText = `${parseInt(index) + 1}. ${menuItems[index]}`;
+    newText.innerText = `${parseInt(index, 10) + 1}. ${menuItems[index]}`;
     menuTextContainer.appendChild(newText);
   }
   imageContainer.appendChild(image);
