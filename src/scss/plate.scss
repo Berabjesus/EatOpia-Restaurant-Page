@@ -1,0 +1,59 @@
+/*
+*   CSS TABLE OF CONTENTS
+*
+*   1. Sections
+*     1.1 section one
+*
+*
+*/
+
+/*** 1. section one ***/
+
+.plate-section-one {
+  border-top: 3px solid black;
+  min-height: 90vh;
+  height: 120vh;
+}
+
+.plate-items-container {
+  border: 2px solid black;
+  overflow-y: auto;
+}
+
+.plate-container {
+  height: 100%;
+  padding: 5rem 10rem 5rem 10rem;
+  background: url('../assets/plate/plate.png') no-repeat;
+  background-position: center;
+  background-size: 90%;
+}
+
+.drag-box {
+  min-height: 150px;
+  max-height: 150px;
+  width: auto;
+  border: 1px dashed rgb(102, 100, 100);
+  box-shadow: 5px 0 20px rgb(172, 170, 170);
+  cursor: grab;
+}
+
+.dragbox-images {
+  object-fit: contain;
+}
+
+.drop-box {
+  border: 1px dashed rgb(14, 12, 6);
+  border-radius: 50%;
+  height: 33.3%;
+  width: 33.3%;
+}
+
+.over {
+  border: 2px dashed rgb(83, 78, 78);
+  background-color: rgba(224, 215, 200, 0.418);
+}
+
+.price-box {
+  height: 150px;
+  width: 100%;
+}
