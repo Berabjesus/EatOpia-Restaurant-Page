@@ -254,6 +254,11 @@ $logoFont: 'Montserrat', sans-serif;
   background-color: inherit;
 }
 
+.section-four h2 {
+  // border-width: 5px;
+  border-bottom: 3px solid black;
+}
+
 /*** 6. Animations ***/
 
 @keyframes fadein {
