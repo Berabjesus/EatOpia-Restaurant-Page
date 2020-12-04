@@ -115,11 +115,7 @@ $logoFont: 'Montserrat', sans-serif;
 }
 
 .divider-line::after {
-  border: 2px solid;
   border-image: linear-gradient(-90deg, rgba(60, 74, 83, 0), black) 1;
-  border-left: none;
-  border-top: none;
-  border-right: none;
 }
 
 /*** 3. Main ***/
