@@ -21,10 +21,15 @@
   height: 90vh;
 }
 
+.menu-section-one > h1 {
+  width: auto;
+  border-bottom: 3px solid black;
+}
+
 .menu-image-container {
   position: relative;
   width: 100%;
-  box-shadow: 3px 0 50px rgba(0, 0, 0, 0.842);
+  box-shadow: 3px 0 50px rgba(94, 88, 88, 0.842);
 }
 
 .menu-text-container {
@@ -45,5 +50,5 @@
 }
 
 .menu-text-container > h4 {
-  font-size: 80px;
+  font-size: 70px;
 }

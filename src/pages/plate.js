@@ -61,8 +61,12 @@ const buildBoard = (container) => {
   const price = document.createElement('h1');
   price.innerText = 0;
   price.classList.add('total-price');
-  priceBox.appendChild(price);
+  const orderBtn = document.createElement('button');
+  orderBtn.innerText = 'Order Now';
+  orderBtn.classList.add('btn', 'btn-dark', 'shadow-lg');
 
+  priceBox.appendChild(price);
+  priceBox.append(orderBtn);
   priceContainer.appendChild(priceBox);
 
   section.appendChild(sectionHeader);
