@@ -107,7 +107,7 @@ $logoFont: 'Montserrat', sans-serif;
   flex: 1 1 0;
   width: 40%;
   margin: 0 2rem;
-  border: 2px solid;
+  border: 3px solid;
   border-image: linear-gradient(90deg, rgba(60, 74, 83, 0), black) 1;
   border-left: none;
   border-top: none;
@@ -115,11 +115,7 @@ $logoFont: 'Montserrat', sans-serif;
 }
 
 .divider-line::after {
-  border: 2px solid;
   border-image: linear-gradient(-90deg, rgba(60, 74, 83, 0), black) 1;
-  border-left: none;
-  border-top: none;
-  border-right: none;
 }
 
 /*** 3. Main ***/
@@ -252,6 +248,11 @@ $logoFont: 'Montserrat', sans-serif;
   min-width: 70vh;
   margin: 20vh 0 0 0;
   background-color: inherit;
+}
+
+.section-four h2 {
+  // border-width: 5px;
+  border-bottom: 3px solid black;
 }
 
 /*** 6. Animations ***/

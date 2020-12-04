@@ -123,7 +123,7 @@ const fourthSection = (container) => {
     itemContainer.classList.add('d-flex', 'flex-column', 'col-6', 'col-md-3');
     const header = document.createElement('h2');
     header.innerText = div.title;
-    header.classList.add('border-bottom', 'border-dark', 'mr-auto', 'pb-3');
+    header.classList.add('mr-auto', 'pb-3');
     itemContainer.appendChild(header);
     for (let item of div.items) {
       const text = item;
