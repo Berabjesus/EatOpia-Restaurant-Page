@@ -15,7 +15,7 @@
 
 ## Live Demo
 
-[EatOpia Restaurant Live Demo](https://rawcdn.githack.com/Berabjesus/EatOpia-Restaurant-Page/0656a4f4a16f7e7b980b3aca36001829f2830e72/dist/index.html)
+[EatOpia Restaurant Live Demo](https://raw.githack.com/Berabjesus/EatOpia-Restaurant-Page/development/dist/index.html#)
 
 # ScreenShots
 ### Home Page, login and Index Interface
