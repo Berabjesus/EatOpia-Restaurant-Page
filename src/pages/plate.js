@@ -66,7 +66,7 @@ const buildBoard = (container) => {
   orderBtn.classList.add('btn', 'btn-dark', 'shadow-lg');
 
   priceBox.appendChild(price);
-  priceBox.append(orderBtn)
+  priceBox.append(orderBtn);
   priceContainer.appendChild(priceBox);
 
   section.appendChild(sectionHeader);
