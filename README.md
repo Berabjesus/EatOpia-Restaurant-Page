@@ -1,6 +1,6 @@
 # EatOpia Restaurant Desktop app
 
-> This Single Page Application (SPA) project is made to create a restaurant homepage by dynamically rendering it using JavaScript DOM manipulation. JavaScript is used to generate the entire contents of the website. Bootstrap and CSS rules are applied for a better UI and UX. 
+> This desktop Single Page Application (SPA) project is made to create a restaurant homepage by dynamically rendering it using JavaScript DOM manipulation. JavaScript is used to generate the entire contents of the website. Bootstrap and CSS rules are applied for a better UI and UX.
 
 ## Built With
 
